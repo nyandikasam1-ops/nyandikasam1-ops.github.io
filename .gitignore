@@ -3,3 +3,8 @@ dist/
 .vite/
 .env*
 !.env.example
+.agents/
+.claude/
+.vscode/
+skills-lock.json
+vercel-upload.zip
