@@ -47,9 +47,9 @@ export default function MediaLibrary() {
         setItems(Array.isArray(data) ? data : []);
       } catch {
         if (active) setError('Media library is temporarily unavailable.');
+      } finally {
+        if (active) setLoading(false);
       }
-      if (!active) return;
-      setLoading(false);
     }
     loadMedia();
     return () => { active = false; };
